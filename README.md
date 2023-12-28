@@ -32,7 +32,7 @@ ChatBox is a custom implementation of [Google AIY Voice Kit](https://aiyprojects
 
 ## Installation
 1. Clone the repository.
-2. Install the required Python packages. (note to myself: venvs are called hf-whisper for STT and TTS for, well, TTS).
+2. Install the required Python packages - it's a good idea to have separate virtual environments for each server. (note to myself: venvs are called hf-whisper for STT and TTS for, well, TTS).
 3. Follow the instructions for setting up the local servers (STT, LLM, TTS).
 4. Update the IP addresses and ports in the `chatbox_local_text.py` as per your network setup.
 

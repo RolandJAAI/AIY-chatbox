@@ -38,7 +38,7 @@ async def homepage(request):
 
 @app.on_event("startup")
 async def startup_event():
-    # initialize other ressources if needed
+    # initialize other resources if needed
     pass
 
 # start server with `uvicorn local_whisper:app --reload`

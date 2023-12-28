@@ -40,7 +40,7 @@ ChatBox is a custom implementation of [Google AIY Voice Kit](https://aiyprojects
 1. Start all the local servers (STT, LLM, TTS).
 2. Run `chatbox_local_text.py` on the Raspberry Pi Zero.
 3. Wait until the button on top of the Voice Kit lights up green.
-4. Interact with the system using voice (press the button to start/stop recording) or by typing in the terminal.
+4. Interact with the system using voice (press the button to start/stop recording) or by typing in the terminal. Answers will always be provided by audio, and if a monitor is connected also in the terminal.
 5. There are hotwords to restart the conversation ('neustart'), stopping the service ('beenden') and for adjusting the volume ('leiser/lauter'), feel free to adjust those to your needs in '`chatbox_local_text.py`
 6. Customize the assistant's persona if needed.
 

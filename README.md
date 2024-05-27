@@ -8,7 +8,7 @@ ChatBox is a custom implementation of [Google AIY Voice Kit](https://aiyprojects
 
 ## Features
 - **Local STT**: Converts speech to text using a local Whisper server.
-- **Local LLM**: Processes and understands queries using an penAI style API (ollama is great).
+- **Local LLM**: Processes and understands queries using an OpenAI style API ([ollama](https://ollama.com) is great).
 - **Local TTS**: Converts text responses back into speech using Coqui xTTS-v2.
 - **Interactive LED Indicators**: Provides visual feedback during different operations.
 - **Customizable Assistant Persona**: Set up your assistant persona, with a specific interaction style.

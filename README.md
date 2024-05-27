@@ -1,7 +1,7 @@
 # ChatBox - A Local STT, LLM, and TTS Implementation of Google AIY Voice Kit
 
 ## Overview
-ChatBox is a custom implementation of [Google AIY Voice Kit](https://aiyprojects.withgoogle.com/voice/). It utilizes local Speech-To-Text (STT), local Large Language Model (LLM), and local Text-To-Speech (TTS) services, all running on a MacBook or Linux-Server with GPU (recommended) within the same network. This setup is designed to work with the Google AIY Voice Kit which contains a Raspberry Pi Zero, speaker, and microphone This project is motivated by building a tutor for a personalized learning assistant experience for schools.
+ChatBox is a custom implementation of [Google AIY Voice Kit](https://aiyprojects.withgoogle.com/voice/). It utilizes local Speech-To-Text (STT), local Large Language Model (LLM), and local Text-To-Speech (TTS) services, all running on a MacBook or Linux-Server with GPU (recommended) within the same network. This setup is designed to work with the Google AIY Voice Kit which contains a Raspberry Pi Zero, speaker, and microphone This project is motivated by building a tutor for a personalized learning assistant experience for schools. If you do not have an AIY Box, you can run the `box_mock.py` script instead and use the ctrl key instead.
 
 
 ![ChatBox using Google AIY Voice Kit](https://github.com/RolandJAAI/chatbox/blob/main/chatbox.jpeg)

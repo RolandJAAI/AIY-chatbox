@@ -15,7 +15,7 @@ from starlette.routing import Route
 from starlette.responses import StreamingResponse, PlainTextResponse
 
 # path to local stt model
-stt_model_id = "stt_model/whisper-large-v3-german"
+stt_model_id = "primeline/distil-whisper-large-v3-german"
 
 # path to local llm model's chat endpoint
 LLM_URL = "http://127.0.0.1:11434/api/chat"
@@ -36,6 +36,14 @@ stt_model = AutoModelForSpeechSeq2Seq.from_pretrained(
         stt_model_id, torch_dtype=torch_dtype, low_cpu_mem_usage=True, use_safetensors=True
     )
 stt_model.to(device)
+
+stt_model.eval()
+if torch.cuda.is_available():
+        import torch_tensorrt # noqa
+        model = torch.compile(
+            model, mode="max-autotune", backend="torch_tensorrt", fullgraph=True
+        )
+
 stt_processor = AutoProcessor.from_pretrained(stt_model_id)
 stt_pipe = pipeline(
     "automatic-speech-recognition",

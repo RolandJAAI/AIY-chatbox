@@ -81,8 +81,10 @@ stream_chunk_size = 20
 config = XttsConfig()
 config.load_json("XTTS-v2/config.json") # path to local xtts config
 model = Xtts.init_from_config(config)
-model.load_checkpoint(config, checkpoint_dir="XTTS-v2", use_deepspeed=True) # path to local TTS directory
-model.cuda() # assuming GPU
+deepspeed = True if torch.cuda.is_available() else False
+model.load_checkpoint(config, checkpoint_dir="XTTS-v2", use_deepspeed=deepspeed) # path to local TTS directory
+if device != "cpu":
+    model.cuda() # assuming GPU
 
 print("Computing speaker latents...")
 gpt_cond_latent, speaker_embedding = model.get_conditioning_latents(audio_path=[speaker])
